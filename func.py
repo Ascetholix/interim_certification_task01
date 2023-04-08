@@ -3,12 +3,23 @@ from reader import *
 
 def search_notes():
     value = input('Поиск > ')
-    search(value)
+    print(search(value))
 
 def notes():
     value = input("Введите заметку > ")
-    note_log(value)
+    creat_log(value)
     print("Заметка успешно сохранена\n")
 
 def read_notes():
-    read()
+    read_log()
+
+def edit_notes():
+    value = input("Введите заметку > ")
+    text = search(value)
+    print(text)
+    edit_text(text)
+
+def del_notes():
+    value = input("Введите заметку > ")
+    text = search(value)
+    del_text(text)
